@@ -1,0 +1,113 @@
+.navbar {
+  grid-column: 1/-1;
+  grid-template-rows: 1/1;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: space-evenly;
+  padding: 1vh 3rem 1vh 3rem;
+  background-color: $color-cream-dark;
+
+  &__logo {
+    font-size: 10vh;
+
+    color: $color-primary;
+    fill: $color-primary;
+
+    &--content {
+      font-family: "Grape Nuts", sans-serif;
+      font-size: 2.2rem;
+      color: $color-primary;
+
+      margin-left: 1.5rem;
+    }
+  }
+
+  &__form {
+    &--input {
+      padding: 0.5rem 2rem;
+      height: 8vh;
+      width: 40rem;
+      border: none;
+      margin-right: -2.5rem;
+      background-color: $color-white-honeydew-1;
+      font-size: 1.6rem;
+      border-radius: 5rem;
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    margin-left: auto;
+    &--button {
+      i {
+        font-size: 2rem;
+      }
+      padding: 0.5rem 4rem;
+      border-radius: 5rem;
+      height: 8vh;
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border: none;
+      background-image: linear-gradient(
+        to left top,
+        #402218,
+        #462015,
+        #4d1d13,
+        #531a11,
+        #5a1510,
+        #5b1210,
+        #5d0f10,
+        #5e0b10,
+        #5a0c10,
+        #560d0f,
+        #530d0f,
+        #4f0e0e
+      );
+
+      color: $color-white-honeydew-1;
+      display: inline-flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      justify-items: center;
+      gap: 1rem;
+      margin-left: -2.5rem;
+    }
+  }
+
+  &__buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 2rem;
+  }
+  &__button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-primary;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 0.5rem;
+    i {
+      font-size: 2.5rem;
+      color: $color-secondary;
+      font-weight: 800;
+      transition: all 800ms;
+      transition-timing-function: ease;
+    }
+
+    &:hover {
+      i {
+        color: $color-secondary-dark;
+      }
+    }
+  }
+}

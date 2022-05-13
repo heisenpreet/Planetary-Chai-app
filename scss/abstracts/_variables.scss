@@ -1,0 +1,53 @@
+:root {
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-neutral-200: hsl(255, 100%, 98%);
+  --clr-neutral-400: hsl(223, 23%, 55%, 1);
+  --clr-neutral-800: hsl(223, 47%, 23%);
+
+  --clr-primary-200: hsl(225, 100%, 94%);
+  --clr-primary-300: hsl(245, 83%, 68%, 1);
+  --clr-primary-400: hsl(245, 75%, 52%);
+
+  --fs-700: 1.75rem;
+  --fs-400: 1rem;
+  --fs-300: 0.875rem;
+
+  --fw-400: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+}
+
+$color-grey-light: #868e96;
+$color-grey-medium: #495057;
+$color-grey-dark: #343a40;
+
+$color-background: #fcf0c8;
+$gunmetal: #2d3239;
+
+$black-light: #1c1f22;
+$black-mediumdark: #121416;
+$black-dark: #090a0b;
+
+$color-white-honeydew-1: #ebfff8; //honeydew
+$color-white-ivory-2: #e7ebef; //ivory
+$color-white-lavender-3: #f3e2e6;
+$color-white-1: #ffeeee;
+$color-white-2: #f1f8f6;
+$color-white-3: #f3f1e7;
+$color-cream-light: #fff6ea;
+$color-cream-dark: #face7f;
+$color-cream-dark-1: #fbd38c;
+
+$color-primary: #630a10;
+
+$color-primary-light: #4b615b;
+$color-primary-lightest: #daa4df;
+$color-primary-dark: #611169;
+$color-primary-darkest: #410b46;
+
+$color-secondary: #008248;
+$color-secondary-dark: #5c3d2e;
+$color-secondary-dark-1: #402b20;
+
+$color-tertiary-light: #1998ff;
+$color-tertiary-dark: #5643fa;
