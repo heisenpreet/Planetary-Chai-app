@@ -1,12 +1,13 @@
 {
-  "name": "titlename",
+  "name": "Planetarychaiapp",
   "version": "1.0.0",
-  "description": "Landing page",
+  "description": "web Application",
   "main": "script.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "compile:sass": "node-sass scss/main.scss css/style.css -w",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver compile:sass",
     "git:pull": "git pull",
     "git:add": "git add .",
     "git:commit": "git commit -m \"v5\" ",
@@ -16,10 +17,12 @@
   "author": "Harry",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.5.0",
     "autoprefixer": "^10.4.4",
     "concat": "^1.0.3",
     "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
+    "parcel": "^2.5.0",
     "postcss-cli": "^9.1.0"
   }
 }
