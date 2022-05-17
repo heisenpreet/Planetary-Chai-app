@@ -1,5 +1,133 @@
-.article {
-  grid-row: 1/1;
-  grid-column: 12/-1;
-  background-color: $color-white-lavender-3;
+.recipe {
+  grid-row: 2/2;
+  grid-column: 14/-2;
+  position: relative;
+  &__heading {
+    text-align: center;
+    font-family: "Concert One", cursive;
+    letter-spacing: 2px;
+    font-size: 4rem;
+    color: $color-primary;
+    padding: 1rem 0;
+    background-image: linear-gradient(
+      to right bottom,
+      #b5fe83,
+      #c6fe88,
+      #d5fe8e,
+      #e3fe95,
+      #effe9d,
+      #f1fea7,
+      #f4ffb1,
+      #f6ffbb,
+      #f2ffc7,
+      #f1ffd3,
+      #f0ffdf,
+      #f2ffe9
+    );
+    clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0 100%);
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5rem;
+    li {
+      font-size: 1.4rem;
+    }
+
+    &-icon {
+      margin-right: 0.5rem;
+      font-size: 2rem;
+      color: #f38e82;
+    }
+  }
+  &__ingredients {
+    list-style: none;
+    background-color: rgba(243, 226, 230, 0.6);
+    transition: all 800ms;
+    transition-timing-function: ease;
+    position: relative;
+    &:hover {
+      background-color: rgba(243, 226, 230, 0.95);
+    }
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    &-heading {
+      color: #f38e82;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  &__link {
+    transition: all 800ms;
+    transition-timing-function: ease;
+    background-color: rgba(242, 239, 238, 0.6);
+    &:hover {
+      background-color: rgba(242, 239, 238, 0.95);
+    }
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+
+    text-align: center;
+
+    &-para {
+      font-size: 1.4rem;
+    }
+    &-btn {
+      text-decoration: none;
+      color: $color-primary;
+      font-size: 1.8rem;
+      font-weight: 600;
+      padding: 0.6rem 1.2rem;
+      background-color: rgba(250, 207, 127, 0.6);
+      border-radius: 5rem;
+      transition: all 500ms;
+      transition-timing-function: ease;
+      &:hover {
+        text-decoration: none;
+        color: $color-primary;
+        background-color: $color-cream-dark;
+      }
+    }
+  }
+
+  &__action {
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 1rem;
+    &-icon {
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      transition: all 500ms;
+      transition-timing-function: ease;
+      background-color: rgba(250, 207, 127, 0.7);
+      &:hover {
+        background-color: $color-cream-dark;
+      }
+      color: $color-primary;
+      font-size: 2rem;
+      border-radius: 50rem;
+    }
+  }
+
+  &__empty {
+    text-align: center;
+    color: $color-grey-dark;
+
+    @include absolute-center;
+
+    &-icon {
+      color: #f38e82;
+      font-size: 4rem;
+    }
+  }
+
+  &__spinner {
+    @include absolute-center;
+    color: #f38e82;
+  }
 }

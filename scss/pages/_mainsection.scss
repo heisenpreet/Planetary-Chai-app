@@ -3,5 +3,18 @@
   grid-column: 1/-1;
   display: grid;
   grid-template-columns: repeat(40, 2.5%);
-  grid-template-rows: 100%;
+  grid-template-rows: 3% 94% 3%;
+
+  // background-image: linear-gradient(
+  //     rgba(243, 226, 230, 0.3),
+  //     rgba(243, 226, 230, 0.3)
+  //   ),
+  // //   url(http://forkify-api.herokuapp.com/images/pizzaburgera5bd.jpg);
+  background-size: cover;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
 }

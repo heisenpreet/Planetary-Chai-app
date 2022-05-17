@@ -1,5 +1,11 @@
 .sidebar {
-  grid-row: 1/-1;
-  grid-column: 1/12;
-  background-color: $color-white-honeydew-1;
+  grid-row: 2/2;
+  grid-column: 2/13;
+  border-radius: 1rem;
+  background-color: rgba(235, 255, 248, 0.6);
+  transition: all 800ms;
+  transition-timing-function: ease;
+  &:hover {
+    background-color: rgba(235, 255, 248, 0.95);
+  }
 }

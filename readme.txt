@@ -7,3 +7,13 @@
 
 
     all the files needed for css build , copy paste json
+
+
+    : "1-1/2 pound Ground Beef"
+1: "1/2 pound Italian Sausage ( A Little More Is Fine!)"
+2: "1/2 teaspoon Italian Seasoning"
+3: "8 slices Mozzarella Or Provolone Cheese"
+4: "Pepperoni Slices"
+5: "8 Tablespoons Jarred Marinara Sauce"
+6: "Grated Parmesan Cheese"
+7: "4 whole Kaiser Rolls Or Good Hamburger Buns"
