@@ -83,6 +83,10 @@ class RecipeView {
       ),url(${this.#data.image})`
     );
   }
+
+  eventPublisher(handler) {
+    window.addEventListener("hashchange", handler);
+  }
 }
 
 export default new RecipeView();

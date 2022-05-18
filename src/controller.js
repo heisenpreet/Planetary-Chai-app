@@ -17,4 +17,7 @@ const showRecipe = async () => {
   }
 };
 
-["hashchange", "load"].forEach((ev) => window.addEventListener(ev, showRecipe));
+const init = () => {
+  recipeView.eventPublisher(showRecipe);
+};
+init();
