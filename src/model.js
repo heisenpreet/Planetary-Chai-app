@@ -1,17 +1,12 @@
+import { API_URL } from "./config.js";
+import { getJSON } from "./helpers.js";
 export const state = {
   recipe: {},
 };
 
 export const loadRecipe = async (id) => {
   try {
-    const recipeData = await fetch(
-      `    https://forkify-api.herokuapp.com/api/get?rId=${id}`
-    );
-    const recipeResponse = await recipeData.json();
-
-    if (recipeResponse.hasOwnProperty("error")) {
-      throw new Error(recipeResponse.error);
-    }
+    const recipeResponse = await getJSON(`${API_URL}${id}`); //helder.js for json
 
     const { recipe } = recipeResponse; //destructure each element in the object and rename
     state.recipe = {
@@ -23,8 +18,7 @@ export const loadRecipe = async (id) => {
       title: recipe.title,
       image: recipe.image_url,
     };
-    console.log(state.recipe);
   } catch (error) {
-    alert(error);
+    console.log(error);
   }
 };
