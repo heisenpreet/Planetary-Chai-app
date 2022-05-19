@@ -2,7 +2,7 @@
   "name": "Planetarychaiapp",
   "version": "1.0.0",
   "description": "web Application",
-  "main": "script.js",
+  "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",

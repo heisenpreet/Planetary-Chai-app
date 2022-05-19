@@ -1,6 +1,7 @@
 class RecipeView {
   #parentElement = document.querySelector(".recipe");
   #mainElement = document.querySelector(".main");
+
   #data;
 
   render(data) {
@@ -85,7 +86,59 @@ class RecipeView {
   }
 
   eventPublisher(handler) {
-    window.addEventListener("hashchange", handler);
+    ["hashchange", "load"].forEach((ev) =>
+      window.addEventListener(ev, handler)
+    );
+  }
+
+  modalError(error) {
+    this.#mainElement.insertAdjacentHTML("beforeend", this.#errorMarkup(error));
+  }
+
+  #errorMarkup(error) {
+    return `<div
+    id="modal-close-outside"
+    uk-modal=""
+    class="uk-modal uk-open"
+    tabindex="-1"
+    style="display: block"
+  >
+    <div class="uk-modal-dialog uk-modal-body">
+      <button
+        class="uk-modal-close-outside uk-icon uk-close"
+        type="button"
+        uk-close=""
+      >
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            fill="none"
+            stroke="#000"
+            stroke-width="1.1"
+            x1="1"
+            y1="1"
+            x2="13"
+            y2="13"
+          ></line>
+          <line
+            fill="none"
+            stroke="#000"
+            stroke-width="1.1"
+            x1="13"
+            y1="1"
+            x2="1"
+            y2="13"
+          ></line>
+        </svg>
+      </button>
+      <h2 class="uk-modal-title">Something went wrong!</h2>
+      <p class="error--msg">${error}</p>
+    </div>
+  </div>`;
   }
 }
 

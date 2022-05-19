@@ -13,7 +13,7 @@ const showRecipe = async () => {
 
     recipeView.render(modal.state.recipe);
   } catch (error) {
-    alert(error);
+    recipeView.modalError(error);
   }
 };
 
