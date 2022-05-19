@@ -51,21 +51,8 @@
       letter-spacing: 1px;
       cursor: pointer;
       border: none;
-      background-image: linear-gradient(
-        to left top,
-        #402218,
-        #462015,
-        #4d1d13,
-        #531a11,
-        #5a1510,
-        #5b1210,
-        #5d0f10,
-        #5e0b10,
-        #5a0c10,
-        #560d0f,
-        #530d0f,
-        #4f0e0e
-      );
+      background-color: #85ffbd;
+      background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 50%);
 
       color: $color-white-honeydew-1;
       display: inline-flex;

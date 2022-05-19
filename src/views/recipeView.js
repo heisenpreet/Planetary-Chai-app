@@ -92,10 +92,10 @@ class RecipeView {
   }
 
   modalError(error) {
-    this.#mainElement.insertAdjacentHTML("beforeend", this.#errorMarkup(error));
+    this.#mainElement.insertAdjacentHTML("beforeend", this.#popupMarkup(error));
   }
 
-  #errorMarkup(error) {
+  #popupMarkup(message, heading = "Something went wrong!") {
     return `<div
     id="modal-close-outside"
     uk-modal=""
@@ -135,8 +135,8 @@ class RecipeView {
           ></line>
         </svg>
       </button>
-      <h2 class="uk-modal-title">Something went wrong!</h2>
-      <p class="error--msg">${error}</p>
+      <h2 class="uk-modal-title">${heading}</h2>
+      <p class="error--msg">${message}</p>
     </div>
   </div>`;
   }
