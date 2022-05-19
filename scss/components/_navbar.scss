@@ -51,10 +51,8 @@
       letter-spacing: 1px;
       cursor: pointer;
       border: none;
-      background-color: #85ffbd;
-      background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 50%);
-
-      color: $color-white-honeydew-1;
+      background-color: #f3ed9e;
+      color: $color-primary;
       display: inline-flex;
       justify-content: center;
       align-content: center;
@@ -62,6 +60,14 @@
       justify-items: center;
       gap: 1rem;
       margin-left: -2.5rem;
+
+      transition: background-color 1s, transform 100ms;
+      transition-timing-function: ease;
+
+      &:hover {
+        background-color: #e6df9a;
+        transform: scale(1.02);
+      }
     }
   }
 

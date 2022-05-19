@@ -1,7 +1,8 @@
 import * as modal from "./model.js";
 import recipeView from "./views/recipeView.js";
+import searchView from "./views/searchView.js";
 
-const showRecipe = async () => {
+const controlRecipe = async () => {
   try {
     const hashID = window.location.hash.slice(1);
 
@@ -17,7 +18,20 @@ const showRecipe = async () => {
   }
 };
 
+const controlSearchResults = async () => {
+  try {
+    const query = searchView.getQuery();
+    if (!query) return;
+
+    const data = await modal.searchRecipe(query);
+    console.log(modal.state.search.results);
+  } catch (error) {
+    recipeView.modalError(error);
+  }
+};
+
 const init = () => {
-  recipeView.eventPublisher(showRecipe);
+  recipeView.eventPublisher(controlRecipe);
+  searchView.eventPublisher(controlSearchResults);
 };
 init();

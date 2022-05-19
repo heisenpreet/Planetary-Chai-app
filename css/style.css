@@ -217,17 +217,22 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
       letter-spacing: 1px;
       cursor: pointer;
       border: none;
-      background-image: linear-gradient(to left top, #402218, #462015, #4d1d13, #531a11, #5a1510, #5b1210, #5d0f10, #5e0b10, #5a0c10, #560d0f, #530d0f, #4f0e0e);
-      color: #ebfff8;
+      background-color: #f3ed9e;
+      color: #630a10;
       display: inline-flex;
       justify-content: center;
       align-content: center;
       align-items: center;
       justify-items: center;
       gap: 1rem;
-      margin-left: -2.5rem; }
+      margin-left: -2.5rem;
+      transition: background-color 1s, transform 100ms;
+      transition-timing-function: ease; }
       .navbar__form--button i {
         font-size: 2rem; }
+      .navbar__form--button:hover {
+        background-color: #e6df9a;
+        transform: scale(1.02); }
   .navbar__buttons {
     margin-left: auto;
     display: flex;
@@ -257,7 +262,7 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
   grid-row: 2/2;
   grid-column: 2/13;
   border-radius: 1rem;
-  background-color: rgba(235, 255, 248, 0.6);
+  background-color: rgba(235, 255, 248, 0.7);
   transition: all 800ms;
   transition-timing-function: ease; }
   .sidebar:hover {
@@ -288,7 +293,7 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
       color: #f38e82; }
   .recipe__ingredients {
     list-style: none;
-    background-color: rgba(243, 226, 230, 0.6);
+    background-color: rgba(243, 226, 230, 0.7);
     transition: all 800ms;
     transition-timing-function: ease;
     position: relative;
@@ -303,7 +308,7 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
   .recipe__link {
     transition: all 800ms;
     transition-timing-function: ease;
-    background-color: rgba(242, 239, 238, 0.6);
+    background-color: rgba(242, 239, 238, 0.7);
     padding: 1.5rem;
     border-radius: 0.5rem;
     text-align: center; }

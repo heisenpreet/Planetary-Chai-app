@@ -42,7 +42,7 @@
   }
   &__ingredients {
     list-style: none;
-    background-color: rgba(243, 226, 230, 0.6);
+    background-color: rgba(243, 226, 230, 0.7);
     transition: all 800ms;
     transition-timing-function: ease;
     position: relative;
@@ -62,7 +62,7 @@
   &__link {
     transition: all 800ms;
     transition-timing-function: ease;
-    background-color: rgba(242, 239, 238, 0.6);
+    background-color: rgba(242, 239, 238, 0.7);
     &:hover {
       background-color: rgba(242, 239, 238, 0.95);
     }
