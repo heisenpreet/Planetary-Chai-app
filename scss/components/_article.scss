@@ -125,9 +125,4 @@
       font-size: 4rem;
     }
   }
-
-  &__spinner {
-    @include absolute-center;
-    color: #f38e82;
-  }
 }

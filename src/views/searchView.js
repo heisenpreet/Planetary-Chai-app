@@ -1,12 +1,12 @@
 class SearchView {
-  #parentEL = document.querySelector(".navbar__form");
+  _parentElement = document.querySelector(".navbar__form");
 
   getQuery() {
-    return this.#parentEL.querySelector(".navbar__form--input").value;
+    return this._parentElement.querySelector(".navbar__form--input").value;
   }
 
   eventPublisher(handler) {
-    this.#parentEL.addEventListener("submit", function (e) {
+    this._parentElement.addEventListener("submit", function (e) {
       e.preventDefault();
 
       handler();

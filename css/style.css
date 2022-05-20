@@ -264,7 +264,8 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
   border-radius: 1rem;
   background-color: rgba(235, 255, 248, 0.7);
   transition: all 800ms;
-  transition-timing-function: ease; }
+  transition-timing-function: ease;
+  position: relative; }
   .sidebar:hover {
     background-color: rgba(235, 255, 248, 0.95); }
 
@@ -358,9 +359,3 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
     .recipe__empty-icon {
       color: #f38e82;
       font-size: 4rem; }
-  .recipe__spinner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #f38e82; }

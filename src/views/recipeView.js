@@ -1,38 +1,26 @@
-class RecipeView {
-  #parentElement = document.querySelector(".recipe");
-  #mainElement = document.querySelector(".main");
+import View from "./view.js";
 
-  #data;
+class RecipeView extends View {
+  _parentElement = document.querySelector(".recipe");
+  _mainElement = document.querySelector(".main");
 
   render(data) {
-    this.#data = data;
-    this.#clear();
+    this._data = data;
+    this._clear();
     this.#backgroundImage();
-    this.#parentElement.insertAdjacentHTML(
+    this._parentElement.insertAdjacentHTML(
       "beforeend",
       this.#generateRecipeMarkup()
     );
   }
 
-  #clear() {
-    this.#parentElement.innerHTML = "";
-    this.#mainElement.style.setProperty("background-image", "none");
-  }
-  generateSpinner() {
-    this.#clear();
-    this.#parentElement.insertAdjacentHTML(
-      "beforeend",
-      `<div class="recipe__spinner" uk-spinner="ratio: 2"></div>`
-    );
-  }
-
   #generateRecipeMarkup() {
-    return `<h2 class="recipe__heading">${this.#data.title}</h2>
+    return `<h2 class="recipe__heading">${this._data.title}</h2>
     <ul class="recipe__ingredients">
       <h2 class="recipe__ingredients-heading">RECIPE INGREDIENTS</h2>
       <div class="recipe__items">
 
-      ${this.#data.ingredients
+      ${this._data.ingredients
         .slice(-8)
         .map((el) => {
           return ` <li>
@@ -46,7 +34,7 @@ class RecipeView {
       </div>
       <div class="recipe__action">
         <div uk-lightbox>
-          <a class="lightbox" href="${this.#data.image}">
+          <a class="lightbox" href="${this._data.image}">
             <div class="recipe__action-icon">
               <i class="las la-image"></i></div
           ></a>
@@ -63,12 +51,12 @@ class RecipeView {
       <p class="recipe__link-para">
         This recipe was carefully designed and tested by
         <span class="publisher"><strong>${
-          this.#data.publisher
+          this._data.publisher
         }</strong> </span>.
         Please check out directions at their website.
       </p>
       <a target="_blank" href="${
-        this.#data.publisherURL
+        this._data.publisherURL
       }" class="recipe__link-btn"
         >Instructions <span><i class="las la-arrow-right"></i></span
       ></a>
@@ -76,12 +64,12 @@ class RecipeView {
   }
 
   #backgroundImage() {
-    this.#mainElement.style.setProperty(
+    this._mainElement.style.setProperty(
       "background-image",
       `linear-gradient(
         rgba(243, 226, 230, 0.3),
         rgba(243, 226, 230, 0.3)
-      ),url(${this.#data.image})`
+      ),url(${this._data.image})`
     );
   }
 
@@ -89,56 +77,6 @@ class RecipeView {
     ["hashchange", "load"].forEach((ev) =>
       window.addEventListener(ev, handler)
     );
-  }
-
-  modalError(error) {
-    this.#mainElement.insertAdjacentHTML("beforeend", this.#popupMarkup(error));
-  }
-
-  #popupMarkup(message, heading = "Something went wrong!") {
-    return `<div
-    id="modal-close-outside"
-    uk-modal=""
-    class="uk-modal uk-open"
-    tabindex="-1"
-    style="display: block"
-  >
-    <div class="uk-modal-dialog uk-modal-body">
-      <button
-        class="uk-modal-close-outside uk-icon uk-close"
-        type="button"
-        uk-close=""
-      >
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 14 14"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <line
-            fill="none"
-            stroke="#000"
-            stroke-width="1.1"
-            x1="1"
-            y1="1"
-            x2="13"
-            y2="13"
-          ></line>
-          <line
-            fill="none"
-            stroke="#000"
-            stroke-width="1.1"
-            x1="13"
-            y1="1"
-            x2="1"
-            y2="13"
-          ></line>
-        </svg>
-      </button>
-      <h2 class="uk-modal-title">${heading}</h2>
-      <p class="error--msg">${message}</p>
-    </div>
-  </div>`;
   }
 }
 

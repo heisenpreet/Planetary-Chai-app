@@ -1,6 +1,7 @@
 import * as modal from "./model.js";
 import recipeView from "./views/recipeView.js";
 import searchView from "./views/searchView.js";
+import listView from "./views/listView.js";
 
 const controlRecipe = async () => {
   try {
@@ -20,6 +21,7 @@ const controlRecipe = async () => {
 
 const controlSearchResults = async () => {
   try {
+    listView.generateSpinner();
     const query = searchView.getQuery();
     if (!query) return;
 
