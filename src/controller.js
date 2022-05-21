@@ -25,8 +25,10 @@ const controlSearchResults = async () => {
     const query = searchView.getQuery();
     if (!query) return;
 
-    const data = await modal.searchRecipe(query);
+    await modal.searchRecipe(query);
     console.log(modal.state.search.results);
+
+    listView.render(modal.state.search.results);
   } catch (error) {
     recipeView.modalError(error);
   }
