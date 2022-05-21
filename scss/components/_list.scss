@@ -65,4 +65,18 @@
       text-decoration: none;
     }
   }
+
+  &__error {
+    @include absolute-center;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: max-content;
+    text-align: center;
+
+    &--icon {
+      font-size: 3rem;
+      color: #e6df9a;
+    }
+  }
 }

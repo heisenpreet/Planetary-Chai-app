@@ -32,6 +32,22 @@ class ListView extends View {
 </a>
   </li>`;
   }
+  renderErrorMsg() {
+    this._clear();
+
+    this._parentElement.insertAdjacentHTML("beforeend", this.#errorMarkup());
+  }
+
+  #errorMarkup() {
+    return `<p class="list__error">
+    <i class="list__error--icon las la-utensils"></i>
+    Sorry ! This recipe isn't on our list <br />Please search for
+    another recipe. <br /><br />
+    Try Pizza ! <br /><i
+      class="list__error--icon las la-pizza-slice"
+    ></i>
+  </p>`;
+  }
 }
 
 export default new ListView();

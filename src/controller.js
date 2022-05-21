@@ -30,7 +30,7 @@ const controlSearchResults = async () => {
 
     listView.render(modal.state.search.results);
   } catch (error) {
-    recipeView.modalError(error);
+    listView.renderErrorMsg();
   }
 };
 

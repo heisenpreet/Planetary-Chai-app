@@ -36,12 +36,17 @@ class RecipeView extends View {
         <div uk-lightbox>
           <a class="lightbox" href="${this._data.image}">
             <div class="recipe__action-icon">
-              <i class="las la-image"></i></div
+              <i class="las la-image"></i>
+              <div uk-drop="pos: bottom-justify; animation: uk-animation-slide-top-small; duration: 800">
+        <div class="recipe__dropdown uk-card uk-card-body uk-card-default">Food Picture</div>
+    </div></div
           ></a>
         </div>
 
         <div class="recipe__action-icon">
           <i class="las la-bookmark"></i>
+          <div uk-drop="pos: bottom-justify; animation: uk-animation-slide-top-small; duration: 800">
+          <div class="recipe__dropdown uk-card uk-card-body uk-card-default">Bookmark</div>
         </div>
       </div>
     </ul>

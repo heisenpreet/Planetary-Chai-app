@@ -125,4 +125,14 @@
       font-size: 4rem;
     }
   }
+
+  &__dropdown {
+    font-size: 1.4rem;
+    font-family: inherit;
+    padding: 1rem;
+    text-align: center;
+    width: max-content;
+    height: min-content;
+    background-color: rgba(250, 207, 127, 0.9);
+  }
 }

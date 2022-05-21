@@ -259,6 +259,7 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
       color: #5c3d2e; }
 
 .sidebar {
+  position: relative;
   grid-row: 2/2;
   grid-column: 2/13;
   border-radius: 1rem;
@@ -385,6 +386,14 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
     .recipe__empty-icon {
       color: #f38e82;
       font-size: 4rem; }
+  .recipe__dropdown {
+    font-size: 1.4rem;
+    font-family: inherit;
+    padding: 1rem;
+    text-align: center;
+    width: max-content;
+    height: min-content;
+    background-color: rgba(250, 207, 127, 0.9); }
 
 .list {
   display: flex;
@@ -438,3 +447,16 @@ FADE IN OUT ANIMATION ,*KEY FRAMES* IMPORTANT
     .list__item:hover, .list__item:active {
       background-color: #f3e2e6;
       text-decoration: none; }
+  .list__error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 600;
+    width: max-content;
+    text-align: center; }
+    .list__error--icon {
+      font-size: 3rem;
+      color: #e6df9a; }
